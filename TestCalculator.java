@@ -28,4 +28,10 @@ public class TestCalculator {
         assertEquals(149,Calculator.add("30\n21,98"));
     }
 
+    @Test
+    public void twoNumberswithNewDelimiterInput(){
+        assertEquals(149,Calculator.add("//;\n30;21;98"));
+    }
+    
+
 }
