@@ -32,6 +32,17 @@ public class TestCalculator {
     public void twoNumberswithNewDelimiterInput(){
         assertEquals(149,Calculator.add("//;\n30;21;98"));
     }
+
+    @Test
+    public void negativeNumberInput(){
+        try {
+            Calculator.add("//;\n3;-2;-8");
+        } catch (RuntimeException e) {
+            assertEquals("negatives not allowed: -2 -8", e.getMessage());
+        }
+
+    }
+
     
 
 }
