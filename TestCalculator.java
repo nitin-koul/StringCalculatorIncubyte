@@ -19,4 +19,13 @@ public class TestCalculator {
         assertEquals(5,Calculator.add("3,2"));
     }
 
+    @Test
+    public void threeNumbersInput(){
+        assertEquals(14,Calculator.add("3,2,9"));
+    }  
+    @Test
+    public void threeNumbersWithNewLineInput(){
+        assertEquals(149,Calculator.add("30\n21,98"));
+    }
+
 }
